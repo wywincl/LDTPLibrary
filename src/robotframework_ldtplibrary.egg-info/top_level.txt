@@ -1,2 +1,0 @@
-LDTPLibrary
-ez_setup
