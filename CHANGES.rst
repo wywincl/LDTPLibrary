@@ -1,0 +1,31 @@
+Release Notes
+=============
+
+10.1.4
+-------------------
+- Add new intro for ldtp library.
+- Add `Capture Screenshot Without Embedding` keywords in ldtp library.
+
+10.1.3
+-------------------
+- change `Capture Screenshot` keywords with argument out_file in ldtp library.
+
+10.1.2
+-------------------
+- Add requirements.txt for ldtp library.
+
+10.1.1
+-------------------
+- Add some new keywords for ldtp library.
+
+10.1.0
+-------------------
+- Add some keywords for ldtp library. and fix waittillguinoexist does not found bugs.
+
+10.0.2
+-------------------
+- Add two keywords for ldtp library.
+
+10.0.1
+-------------------
+- Fix ascii code cannot decode problem.

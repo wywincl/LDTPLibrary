@@ -1,0 +1,15 @@
+include MANIFEST.in
+include *.txt
+include *.rst
+exclude */*.txt # limit previous command to include only *.txt files in root folder
+exclude */*.rst # limit previous command to include only *.rst files in root folder
+include robot.bmp
+include requirements.txt
+
+include doc/LDTPLibrary.html
+include doc/generate.py
+
+
+recursive-include src *.py
+graft src/LDTPLibrary/resources
+recursive-exclude src *.pyc
