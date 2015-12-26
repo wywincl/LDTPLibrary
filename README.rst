@@ -4,13 +4,13 @@ ldtp library for Robot Framework
 Introduction
 ------------
 
-LDTPLibrary is a web testing library for `Robot Framework`
-that leverages the `ldtp` libraries from the
+LDTPLibrary is a web testing library for `Robot Framework`_
+that leverages the `ldtp`_ libraries from the
 LDTP project.
 
-- More information about this library can be found on the `Wiki` and in the `Keyword Documentation`.
-- Installation information is found in the `INSTALL.rst` file.
-- Developer information is found in `BUILD.rst` file.
+- More information about this library can be found on the `Wiki`_ and in the `Keyword Documentation`_.
+- Installation information is found in the `INSTALL.rst`_ file.
+- Developer information is found in `BUILD.rst`_ file.
 
 
 Installation
@@ -102,4 +102,4 @@ Usage
 
 To write tests with Robot Framework and LDTPLibrary,
 LDTPLibrary must be imported into your Robot test suite.
-See `Robot Framework User Guide` for more information.
+See `Robot Framework User Guide`_ for more information.
