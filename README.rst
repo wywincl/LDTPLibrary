@@ -15,7 +15,7 @@ LDTP project.
 
 Installation
 ------------
-k
+
 Using ``pip``
 '''''''''''''
 
