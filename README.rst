@@ -15,12 +15,12 @@ LDTP project.
 
 Installation
 ------------
-
+k
 Using ``pip``
 '''''''''''''
 
 The recommended installation method is using
-`pip <http://pip-installer.org>`::
+`pip <http://pip-installer.org>`_::
 
     pip install robotframework-ldtplibrary
 
@@ -103,3 +103,13 @@ Usage
 To write tests with Robot Framework and LDTPLibrary,
 LDTPLibrary must be imported into your Robot test suite.
 See `Robot Framework User Guide`_ for more information.
+
+
+.. _Robot Framework: http://robotframework.org
+.. _ldtp: http://ldtp.freedesktop.org/wiki/
+.. _Wiki: https://github.com/wywincl/LDTPLibrary/wiki
+.. _Keyword Documentation: http://robotframework.org/LDTPLibrary/doc/LDTPLibrary.html
+.. _INSTALL.rst: https://github.com/wywincl/LDTPLibrary/blob/master/INSTALL.rst
+.. _BUILD.rst: https://github.com/wywincl/LDTPLibrary/blob/master/BUILD.rst
+.. _Robot Framework User Guide: http://code.google.com/p/robotframework/wiki/UserGuide
+.. _user group for Robot Framework: http://groups.google.com/group/robotframework-users
