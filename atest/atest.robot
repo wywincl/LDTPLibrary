@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Suite description
-Library    /home/nfs/PycharmProjects/LDTPLibrary_v10.0/src/LDTPLibrary
+Library    LDTPLibrary
 #Resource    LDTPLibrary/keywords/high-level-keywords_zh.robot
 #Resource    LDTPLibrary/keywords/high-level-keywords_en.robot
 

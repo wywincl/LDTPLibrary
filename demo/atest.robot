@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     Suite description
-Library           /home/nfs/PycharmProjects/LDTPLibrary_v10.0/src/LDTPLibrary    Capture Screenshot    out_file=/tmp/demo.png    #Resource | LDTPLibrary/keywords/high-level-keywords_zh.robot | #Resource | LDTPLibrary/keywords/high-level-keywords_en.robot
+Library           LDTPLibrary    Capture Screenshot    out_file=/tmp/demo.png    #Resource | LDTPLibrary/keywords/high-level-keywords_zh.robot | #Resource | LDTPLibrary/keywords/high-level-keywords_en.robot
 
 *** Variables ***
 ${window}         frmCalculator

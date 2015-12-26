@@ -2,6 +2,6 @@
 --index https://pypi.python.org/simple/
 
 ldtp==3.5.0
-robotframework==2.8.7
+robotframework==2.9.0
 docutils==0.8.1
 decorator==3.3.2

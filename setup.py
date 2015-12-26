@@ -59,7 +59,7 @@ setup(name='robotframework-ldtplibrary',
       ],
       install_requires=[
           'decorator >= 3.3.2',
-          'robotframework >= 2.8.7',
+          'robotframework >= 2.9.0',
           'docutils >= 0.8.1',
           'ldtp >= 3.5.0',
       ],
