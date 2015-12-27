@@ -33,8 +33,8 @@ class LDTPKeywords(KeywordGroup):
 
     def __init__(self):
         self._client = ldtp
-        reload(sys)
-        sys.setdefaultencoding('utf-8')
+        # reload(sys)
+        # sys.setdefaultencoding('utf-8')
 
     def launch_app(self, cmd, lang='zh_CN.UTF-8', delay=0, env=1, *args):
         """
@@ -442,7 +442,8 @@ class LDTPKeywords(KeywordGroup):
         """
         try:
             self._info("screen capture, and the out file: %s " % out_file)
-            self._html('the capture picture is <a href="%s"><img src="%s">%s</a>' % (out_file, out_file, out_file))
+            self._html('the capture picture is <a href="%s"><img src="%s" width="800px">%s</a>' % (out_file, out_file,
+                                                                                                   out_file))
             return ldtp.imagecapture(window_name, out_file, x, y, width, height)
         except LdtpExecutionError:
             raise LdtpExecutionError("image capture failed")

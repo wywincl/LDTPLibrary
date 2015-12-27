@@ -18,7 +18,9 @@ See 'LICENSE' in the source distribution for more information.
 from ldtpkw import LDTPKeywords
 from logging import LoggingKeywords
 from runonfailure import RunOnFailureKeywords
+from _table import TableKeywords
 
 __all__ = ['LDTPKeywords',
            'LoggingKeywords',
-           'RunOnFailureKeywords']
+           'RunOnFailureKeywords',
+           'TableKeywords']

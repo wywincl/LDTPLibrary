@@ -4,6 +4,7 @@ Release Notes
 10.1.5
 -------------------
 - update some information.
+- add new keywords `Double Click Row Index` for ldtp library.
 
 10.1.4
 -------------------

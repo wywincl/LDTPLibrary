@@ -24,7 +24,8 @@ __version__ = VERSION
 
 class LDTPLibrary(LoggingKeywords,
                   RunOnFailureKeywords,
-                  LDTPKeywords):
+                  LDTPKeywords,
+                  TableKeywords):
     """
     LDTPLibrary is a gui application testing library for Robot Framework.
 
