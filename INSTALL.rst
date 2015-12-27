@@ -46,7 +46,7 @@ and then at the Python prompt type::
 	>> import LDTPLibrary
 	>>
 
-If the python command line interpretor returns with another prompt ('>>' as shown above) then your installation was successful.
+If the python command line interpreter returns with another prompt ('>>' as shown above) then your installation was successful.
 
 Troubleshooting Installation
 ----------------------------
@@ -57,6 +57,6 @@ The most common issue with installing LDTPLibrary is missing dependencies. An er
 
 indicates that you are missing the Robot Framework package.  To correct this problem try typing at the prompt::
 
-	  easy_install robotframework
+    easy_install robotframework
 
 Similarly if you receive "No module named ..." error message then you have another missing dependency.  To correct, use easy_install to install the missing package.
