@@ -21,10 +21,10 @@ src/
     Library source code
 
 utest/
-    Unit tests for Selenium2Library
+    Unit tests for LDTPLibrary
 
 atest/
-    acceptance tests for Selenium2Library
+    acceptance tests for LDTPLibrary
 
 
 Building a Distribution

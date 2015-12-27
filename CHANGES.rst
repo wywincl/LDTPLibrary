@@ -3,7 +3,7 @@ Release Notes
 
 10.1.5
 -------------------
-- update some informations.
+- update some information.
 
 10.1.4
 -------------------
