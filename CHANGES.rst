@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+10.1.6
+-------------------
+- add 'Capture Windows Screenshot' keywords for LDTP Library.
+- add 'Set Screenshot Directory' keywords for LDTP Library.
+
 10.1.5
 -------------------
 - update some information.

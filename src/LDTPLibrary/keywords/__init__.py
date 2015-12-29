@@ -19,8 +19,10 @@ from ldtpkw import LDTPKeywords
 from logging import LoggingKeywords
 from runonfailure import RunOnFailureKeywords
 from _table import TableKeywords
+from _screenshot import ScreenshotKeywords
 
 __all__ = ['LDTPKeywords',
            'LoggingKeywords',
            'RunOnFailureKeywords',
-           'TableKeywords']
+           'TableKeywords',
+           'ScreenshotKeywords']

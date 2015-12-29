@@ -22,7 +22,7 @@ from LDTPLibrary import utils
 from keywordgroup import KeywordGroup
 
 
-class _ScreenshotKeywords(KeywordGroup):
+class ScreenshotKeywords(KeywordGroup):
     def __init__(self):
         self._screenshot_index = {}
         self._screenshot_path_stack = []

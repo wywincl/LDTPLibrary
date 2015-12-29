@@ -25,6 +25,7 @@ __version__ = VERSION
 class LDTPLibrary(LoggingKeywords,
                   RunOnFailureKeywords,
                   LDTPKeywords,
+                  ScreenshotKeywords,
                   TableKeywords):
     """
     LDTPLibrary is a gui application testing library for Robot Framework.
@@ -52,7 +53,10 @@ class LDTPLibrary(LoggingKeywords,
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = VERSION
 
-    def __init__(self, run_on_failure='Nothing', *args):
+    def __init__(self,
+                 run_on_failure='Nothing',
+                 screenshot_root_directory=None,
+                 *args):
         """
         LDTPLibrary can be imported with optional arguments.
 
@@ -71,6 +75,7 @@ class LDTPLibrary(LoggingKeywords,
         """
         for base in LDTPLibrary.__bases__:
             base.__init__(self)
+        self.screenshot_root_directory = screenshot_root_directory
         self.register_keyword_to_run_on_failure(run_on_failure, *args)
         self.ROBOT_LIBRARY_LISTENER = LibraryListener()
 
