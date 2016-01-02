@@ -68,9 +68,11 @@ class LDTPLibrary(LoggingKeywords,
         Examples:
         | Library `|` LDTPLibrary  `|` run_on_failure = Log Source | # run `Log Source` on failure |
         | Library `|` LDTPLibrary  `|` run_on_failure = Capture Screenshot | # run `Capture Screenshot` on failure |
-        | Library `|` LDTPLibrary  `|` run_on_failure = Capture Screenshot | out_file=/tmp/shot.png |
+        | Library `|` LDTPLibrary  `|` run_on_failure = Capture Screenshot `|` out_file=/tmp/shot.png |
         # run `Capture Screenshot` on failure |
         | Library `|` LDTPLibrary  `|` run_on_failure = Nothing  | # does nothing on failure |
+        | Library `|` LDTPLibrary  `|` run_on_failure = Capture Windows Screenshot `|` screenshot_root_directory=/tmp/ |
+        # run `Capture Windows Screenshot ` on failure |
 
         """
         for base in LDTPLibrary.__bases__:
