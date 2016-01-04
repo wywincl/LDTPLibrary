@@ -259,7 +259,7 @@ class LDTPKeywords(KeywordGroup):
         """
         try:
             self._info(
-                "wait till a window or component exists. [%s, %s, %d]" % (window_name, object_name, gui_time_out))
+                    "wait till a window or component exists. [%s, %s, %d]" % (window_name, object_name, gui_time_out))
             return ldtp.waittillguiexist(window_name, object_name, gui_time_out, state)
         except LdtpExecutionError:
             raise LdtpExecutionError("exec ldtp.waittillguiexist failed")
@@ -288,7 +288,7 @@ class LDTPKeywords(KeywordGroup):
         """
         try:
             self._info(
-                "wait till a window or component exists. [%s, %s, %d]" % (window_name, object_name, gui_time_out))
+                    "wait till a window or component exists. [%s, %s, %d]" % (window_name, object_name, gui_time_out))
             return ldtp.waittillguinotexist(window_name, object_name, gui_time_out)
         except LdtpExecutionError:
             raise LdtpExecutionError("exec ldtp.waittillguinoexist failed")
@@ -668,24 +668,6 @@ class LDTPKeywords(KeywordGroup):
             return ldtp.getobjectproperty(window_name, object_name, property_name)
         except LdtpExecutionError:
             raise LdtpExecutionError("get object property failed")
-
-    def double_click_row(self, window_name, table_name, row_text):
-        """
-        Double click row matching given text
-
-        :param window_name:
-
-        :param table_name:
-
-        :param row_text:
-
-        :return:
-        """
-        try:
-            self._info("double click row matching given text")
-            return ldtp.doubleclickrow(window_name, table_name, row_text)
-        except LdtpExecutionError:
-            raise LdtpExecutionError("Double click row failed")
 
     def double_click(self, window_name, object_name):
         """
@@ -1437,3 +1419,4 @@ class LDTPKeywords(KeywordGroup):
             return ldtp.invokemenu(window_name, object_name)
         except LdtpExecutionError as e:
             raise LdtpExecutionError(e.message)
+

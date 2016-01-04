@@ -80,4 +80,3 @@ class LDTPLibrary(LoggingKeywords,
         self.screenshot_root_directory = screenshot_root_directory
         self.register_keyword_to_run_on_failure(run_on_failure, *args)
         self.ROBOT_LIBRARY_LISTENER = LibraryListener()
-

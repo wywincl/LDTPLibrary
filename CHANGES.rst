@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+10.2.0
+-------------------
+- add a lot of new keywords for LDTP Library.
+
 10.1.7
 -------------------
 - change some directories structure.
