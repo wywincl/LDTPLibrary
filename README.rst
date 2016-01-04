@@ -96,6 +96,9 @@ doc/
 src/
     Python source code
 
+test/
+    Unit test and acceptance test for LDTPLibrary
+
 
 Usage
 -----

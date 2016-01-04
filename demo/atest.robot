@@ -8,7 +8,7 @@ ${dialog}         dlgPreferences
 
 *** Test Cases ***
 Test title
-    Launch APP    gnome-gaeg    zh_CN.utf-8
+    Launch APP    gnome-calculator2    zh_CN.utf-8
     # 等待直到窗口${window}存在
     # 选择菜单标题栏    ${window}    mnuApplication;mnuPreferences
     #    ${ret}=    等待直到窗口${window}中的对象${dialog}存在

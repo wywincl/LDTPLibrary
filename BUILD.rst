@@ -6,10 +6,10 @@ Directory Layout
 ----------------
 
 MANIFEST.in
-	File that controls what gets included in a distribution
+    File that controls what gets included in a distribution
 
 setup.py
-	Setup script (uses setuptools)
+    Setup script (uses setuptools)
 
 demo/
     Demo gui app, acceptance tests, and scripts
@@ -20,11 +20,8 @@ doc/
 src/
     Library source code
 
-utest/
-    Unit tests for LDTPLibrary
-
-atest/
-    acceptance tests for LDTPLibrary
+test/
+    Unit tests and acceptance tests for LDTPLibrary
 
 
 Building a Distribution
@@ -47,7 +44,7 @@ a Windows machine. If the rest of the distribution has been built on
 a non-Windows machine and you want to build just the Windows installers,
 use the --winonly flag::
 
-	python build_dist.py --winonly <python 2.6 path> <python 2.7 path>
+    python build_dist.py --winonly <python 2.6 path> <python 2.7 path>
 
 
 
@@ -57,5 +54,5 @@ Building Keyword Documentation
 The keyword documentation will get built automatically by build_dist.py,
 but if you need to generate it apart from a distribution build, run::
 
-	python doc/generate.py
+    python doc/generate.py
 

@@ -28,11 +28,8 @@ doc/
 src/
     Python source code
 
-utest/
-    Unitest for ldtplibrary
-
-atest/
-    Acceptance test for ldtplibrary
+test/
+    Unit test and acceptance test for LDTPLibrary
 
 
 Usage
