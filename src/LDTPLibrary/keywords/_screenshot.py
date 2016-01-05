@@ -141,7 +141,7 @@ class ScreenshotKeywords(KeywordGroup):
 
     def _get_screenshot_paths(self, filename):
         filename = filename.format(
-            index=self._get_screenshot_index(filename))
+                index=self._get_screenshot_index(filename))
         filename = filename.replace('/', os.sep)
         screenshotdir = self._get_screenshot_directory()
         logdir = self._get_log_dir()
