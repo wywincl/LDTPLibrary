@@ -103,11 +103,11 @@ class ScreenshotKeywords(KeywordGroup):
         """
         path, link = self._get_screenshot_paths(filename)
         self._create_directory(path)
-        if hasattr(self._ldtp, 'imagecapture'):
-            if not self._ldtp.imagecapture(window_name=window_name, out_file=path):
+        if hasattr(self._client, 'imagecapture'):
+            if not self._client.imagecapture(window_name=window_name, out_file=path):
                 raise RuntimeError('Failed to save screenshot ' + link)
         else:
-            if not self._ldtp.imagecapture(window_name=window_name, out_file=path):
+            if not self._client.imagecapture(window_name=window_name, out_file=path):
                 raise RuntimeError('Failed to save screenshot ' + link)
         # Image is shown on its own row and thus prev row is closed on purpose
         self._html('</td></tr><tr><td colspan="3"><a href="%s">'
