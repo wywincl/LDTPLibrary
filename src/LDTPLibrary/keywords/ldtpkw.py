@@ -998,7 +998,7 @@ class LDTPKeywords(KeywordGroup):
         """
         try:
             self._info("get window list ")
-            return ldtp.getwinowlist()
+            return ldtp.getwindowlist()
         except LdtpExecutionError as e:
             raise LdtpExecutionError(e.message)
 
