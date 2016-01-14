@@ -370,6 +370,21 @@ class LDTPKeywords(KeywordGroup):
         except LdtpExecutionError:
             raise LdtpExecutionError("maximize window failed")
 
+    def unmaximize_window(self, window_name=None):
+        """
+        Description: UnMaximize window based on the given name,
+         default None. If None, will unmaximize all window one by one
+
+        :param window_name:
+
+        :return: 1 on success, LdtpExecutionError exception will be thrown on failure
+        """
+        try:
+            self._info("unmaximize a windows")
+            return ldtp.unmaximizewindow(window_name)
+        except LdtpExecutionError:
+            raise LdtpExecutionError("unmaximize window failed")
+
     def minimize_window(self, window_name=None):
         """
         Description: Minimize window based on the given name,
@@ -384,6 +399,21 @@ class LDTPKeywords(KeywordGroup):
             return ldtp.minimizewindow(window_name)
         except LdtpExecutionError:
             raise LdtpExecutionError("minimize window failed")
+
+    def unminimize_window(self, window_name=None):
+        """
+        Description: UnMinimize window based on the given name,
+         default None. If None, will unminimize all window one by one
+
+        :param window_name:
+
+        :return: 1 on success, LdtpExecutionError exception will be thrown on failure
+        """
+        try:
+            self._info("unminimize a windows")
+            return ldtp.unminimizewindow(window_name)
+        except LdtpExecutionError:
+            raise LdtpExecutionError("unminimize window failed")
 
     def enter_string(self, window_name, object_name='', data=''):
         """
