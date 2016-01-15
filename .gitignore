@@ -1,0 +1,11 @@
+.project
+.pydevproject
+.idea
+test/results
+*.pyc
+*.orig
+MANIFEST
+*.egg-info
+*.egg
+dist
+build
