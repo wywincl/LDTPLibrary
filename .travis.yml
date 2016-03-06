@@ -4,6 +4,9 @@ python:
   - "2.7"
  # command to install dependencies
 install:
+    - wget http://download.freedesktop.org/ldtp/3.x/3.5.x/ldtp-3.5.0.tar.gz
+    - tar zxvf ldtp-3.5.0.tar.gz
+    - cd ldtp-3.5.0 && python setup.py install
     - pip install -r requirements.txt
 
 script: pybot test/atest.robot
