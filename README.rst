@@ -1,7 +1,7 @@
 ldtp library for Robot Framework
 ==================================================
 
-.. image:: https://api.travis-ci.org/wywincl/LDTPLibrary.png
+.. image:: https://api.travis-ci.org/wywincl/LDTPLibrary.svg
     :itarget: http://travis-ci.org/wywincl/LDTPLibrary
 
 .. image:: https://img.shields.io/pypi/v/robotframework-ldtplibrary.svg
