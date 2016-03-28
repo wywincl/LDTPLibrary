@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+10.2.1
+-------------------
+- fixed some error informations.
+
 10.2.0
 -------------------
 - add a lot of new keywords for LDTP Library.
