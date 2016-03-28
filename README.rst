@@ -17,7 +17,7 @@ ldtp library for Robot Framework
 Introduction
 ------------
 
-LDTPLibrary is a web testing library for `Robot Framework`_
+LDTPLibrary is a linux desktop GUI application testing library for `Robot Framework`_
 that leverages the `ldtp`_ libraries from the
 LDTP project.
 
