@@ -264,9 +264,9 @@ class LDTPKeywords(KeywordGroup):
         except LdtpExecutionError:
             raise LdtpExecutionError("exec ldtp.waittillguiexist failed")
 
-    def wait_till_gui_no_exist(self, window_name, object_name='', gui_time_out=30):
+    def wait_till_gui_not_exist(self, window_name, object_name='', gui_time_out=30):
         """
-        Wait till a window or component exists.
+        Wait till a window or component doesn't exist.
 
         :param window_name:  Window name to look for, either full name,
         LDTP's name convention, or a Unix glob.
@@ -291,7 +291,7 @@ class LDTPKeywords(KeywordGroup):
                     "wait till a window or component exists. [%s, %s, %d]" % (window_name, object_name, gui_time_out))
             return ldtp.waittillguinotexist(window_name, object_name, gui_time_out)
         except LdtpExecutionError:
-            raise LdtpExecutionError("exec ldtp.waittillguinoexist failed")
+            raise LdtpExecutionError("exec ldtp.waittillguinotexist failed")
 
     def close_window(self, window_name=''):
         """
