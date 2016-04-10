@@ -591,6 +591,22 @@ class LDTPKeywords(KeywordGroup):
         except LdtpExecutionError:
             raise LdtpExecutionError("verify check items failed")
 
+    def verify_uncheck(self, window_name, object_name):
+        """
+        Verify uncheck items
+
+        :param window_name:
+
+        :param object_name:
+
+        :return:
+        """
+        try:
+            self._info("verify uncheck items")
+            return ldtp.verifyuncheck(window_name, object_name)
+        except LdtpExecutionError:
+            raise LdtpExecutionError("verify uncheck items failed")
+			
     def select_panel(self, window_name, object_name, index):
         """
         Select panel based on index.
