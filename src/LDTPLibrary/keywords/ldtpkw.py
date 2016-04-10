@@ -264,9 +264,9 @@ class LDTPKeywords(KeywordGroup):
         except LdtpExecutionError:
             raise LdtpExecutionError("exec ldtp.waittillguiexist failed")
 
-    def wait_till_gui_no_exist(self, window_name, object_name='', gui_time_out=30):
+    def wait_till_gui_not_exist(self, window_name, object_name='', gui_time_out=30):
         """
-        Wait till a window or component exists.
+        Wait till a window or component doesn't exist.
 
         :param window_name:  Window name to look for, either full name,
         LDTP's name convention, or a Unix glob.
@@ -291,7 +291,7 @@ class LDTPKeywords(KeywordGroup):
                     "wait till a window or component exists. [%s, %s, %d]" % (window_name, object_name, gui_time_out))
             return ldtp.waittillguinotexist(window_name, object_name, gui_time_out)
         except LdtpExecutionError:
-            raise LdtpExecutionError("exec ldtp.waittillguinoexist failed")
+            raise LdtpExecutionError("exec ldtp.waittillguinotexist failed")
 
     def close_window(self, window_name=''):
         """
@@ -591,6 +591,22 @@ class LDTPKeywords(KeywordGroup):
         except LdtpExecutionError:
             raise LdtpExecutionError("verify check items failed")
 
+    def verify_uncheck(self, window_name, object_name):
+        """
+        Verify uncheck items
+
+        :param window_name:
+
+        :param object_name:
+
+        :return:
+        """
+        try:
+            self._info("verify uncheck items")
+            return ldtp.verifyuncheck(window_name, object_name)
+        except LdtpExecutionError:
+            raise LdtpExecutionError("verify uncheck items failed")
+			
     def select_panel(self, window_name, object_name, index):
         """
         Select panel based on index.
@@ -1450,3 +1466,77 @@ class LDTPKeywords(KeywordGroup):
         except LdtpExecutionError as e:
             raise LdtpExecutionError(e.message)
 
+    def get_slider_value(self, window_name, object_name):
+        """
+        Get slider value.
+
+        @param window_name: Window name to look for, either full name,
+        LDTP's name convention, or a Unix glob.
+
+        @type window_name: string
+
+        @param object_name: Object name to look for, either full name,
+        LDTP's name convention, or a Unix glob.
+
+        @type object_name: string
+
+        @return: slider value on success.
+
+        @rtype: float
+        """
+
+        try:
+            self._info("Get slider value (%s, %s)" % (window_name, object_name))
+            return ldtp.getslidervalue(window_name, object_name)
+        except LdtpExecutionError as e:
+            raise LdtpExecutionError(e.message)
+
+    def increase(self, window_name, object_name, iterations):
+        """
+        Increase slider value.
+
+        @param window_name: Window name to look for, either full name,
+        LDTP's name convention, or a Unix glob.
+
+        @type window_name: string
+
+        @param object_name: Object name to look for, either full name,
+        LDTP's name convention, or a Unix glob.
+
+        @type object_name: string
+
+        @return: 1 on success.
+
+        @rtype: integer
+        """
+
+        try:
+            self._info("Increase slider value (%s, %s)" % (window_name, object_name))
+            return ldtp.increase(window_name, object_name, iterations)
+        except LdtpExecutionError as e:
+            raise LdtpExecutionError(e.message)
+
+    def decrease(self, window_name, object_name, iterations):
+        """
+        Decrease slider value.
+
+        @param window_name: Window name to look for, either full name,
+        LDTP's name convention, or a Unix glob.
+
+        @type window_name: string
+
+        @param object_name: Object name to look for, either full name,
+        LDTP's name convention, or a Unix glob.
+
+        @type object_name: string
+
+        @return: 1 on success.
+
+        @rtype: integer
+        """
+
+        try:
+            self._info("Decrease slider value (%s, %s)" % (window_name, object_name))
+            return ldtp.decrease(window_name, object_name, iterations)
+        except LdtpExecutionError as e:
+            raise LdtpExecutionError(e.message)
