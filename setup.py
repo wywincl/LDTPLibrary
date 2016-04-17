@@ -61,7 +61,7 @@ setup(name='robotframework-ldtplibrary',
           'decorator >= 3.3.2',
           'robotframework >= 2.9.0',
           'docutils >= 0.8.1',
-          'ldtp >= 3.5.0',
+          # 'ldtp >= 3.5.0', need ldtp, but pip sources does not existed.
       ],
       py_modules=['ez_setup'],
       package_dir={'': 'src'},
