@@ -16,8 +16,8 @@ See 'LICENSE' in the source distribution for more information.
 """
 
 import ldtp
-from keywordgroup import KeywordGroup
-from _exception import LdtpError
+from .keywordgroup import KeywordGroup
+from ._exception import LdtpError
 from ldtp.client_exception import LdtpExecutionError
 
 

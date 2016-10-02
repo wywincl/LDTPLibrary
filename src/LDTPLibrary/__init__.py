@@ -15,9 +15,9 @@ See http://ldtp.freedesktop.org/wiki/ for more information on LDTP.
 See 'LICENSE' in the source distribution for more information.
 """
 
-from version import VERSION
-from keywords import *
-from utils import LibraryListener
+from .version import VERSION
+from .keywords import *
+from .utils import LibraryListener
 
 __version__ = VERSION
 

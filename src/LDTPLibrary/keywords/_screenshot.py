@@ -19,7 +19,7 @@ import os
 import errno
 import robot
 from LDTPLibrary import utils
-from keywordgroup import KeywordGroup
+from .keywordgroup import KeywordGroup
 
 
 class ScreenshotKeywords(KeywordGroup):

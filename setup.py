@@ -33,7 +33,14 @@ import sys
 from os.path import join, dirname
 sys.path.append(join(dirname(__file__), 'src'))
 
-execfile(join(dirname(__file__), 'src', 'LDTPLibrary', 'version.py'))
+fileToExec = join(dirname(__file__), 'src', 'LDTPLibrary', 'version.py')
+
+#execfile(join(dirname(__file__), 'src', 'LDTPLibrary', 'version.py'))
+#execfile(fileToExec) # python2
+
+with open(fileToExec) as f: # python3
+    code = compile(f.read(), fileToExec, 'exec')
+    exec(code)
 
 DESCRIPTION = """
 LDTPLibrary is a linux desktop testing library for Robot Framework
