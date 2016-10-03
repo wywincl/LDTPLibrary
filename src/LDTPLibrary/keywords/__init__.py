@@ -15,11 +15,11 @@ See http://ldtp.freedesktop.org/wiki/ for more information on LDTP.
 See 'LICENSE' in the source distribution for more information.
 """
 
-from ldtpkw import LDTPKeywords
-from logging import LoggingKeywords
-from runonfailure import RunOnFailureKeywords
-from _table import TableKeywords
-from _screenshot import ScreenshotKeywords
+from .ldtpkw import LDTPKeywords
+from .logging import LoggingKeywords
+from .runonfailure import RunOnFailureKeywords
+from ._table import TableKeywords
+from ._screenshot import ScreenshotKeywords
 
 __all__ = ['LDTPKeywords',
            'LoggingKeywords',

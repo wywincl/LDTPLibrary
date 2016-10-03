@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import events
-from librarylistener import LibraryListener
+#from .events import events
+from .librarylistener import LibraryListener
 
 
 __all__ = [

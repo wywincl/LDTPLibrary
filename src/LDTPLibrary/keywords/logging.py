@@ -17,7 +17,7 @@ See 'LICENSE' in the source distribution for more information.
 
 import os
 from robot.api import logger
-from keywordgroup import KeywordGroup
+from .keywordgroup import KeywordGroup
 from robot.libraries.BuiltIn import BuiltIn
 
 try:

@@ -17,9 +17,10 @@ See 'LICENSE' in the source distribution for more information.
 
 import ldtp
 import sys
-from keywordgroup import KeywordGroup
+import importlib
+from .keywordgroup import KeywordGroup
 from ldtp.client_exception import LdtpExecutionError
-from _exception import LdtpError
+from ._exception import LdtpError
 from robot.api.deco import keyword
 
 try:
@@ -33,8 +34,8 @@ class LDTPKeywords(KeywordGroup):
 
     def __init__(self):
         self._client = ldtp
-        reload(sys)
-        sys.setdefaultencoding('utf-8')
+#        importlib.reload(sys)
+#        sys.setdefaultencoding('utf-8')
 
     def launch_app(self, cmd, lang='zh_CN.UTF-8', delay=0, env=1, *args):
         """
@@ -686,7 +687,7 @@ class LDTPKeywords(KeywordGroup):
         try:
             self._info("verify a menu item is unchecked (%s, %s)" % (window_name, object_name))
             result = ldtp.verifymenuuncheck(window_name, object_name)
-            print result
+            print (result)
             return result
         except LdtpExecutionError:
             raise LdtpExecutionError("verify a menu item is unchecked failed")
@@ -976,7 +977,7 @@ class LDTPKeywords(KeywordGroup):
         try:
             self._info('remap (%s)' % window_name)
             return ldtp.remap(window_name)
-        except LdtpExecutionError, e:
+        except LdtpExecutionError as e:
             self._debug(e.message)
             raise LdtpExecutionError('remap failed.')
 
@@ -1032,7 +1033,7 @@ class LDTPKeywords(KeywordGroup):
             self._info("generate key event with <%s>" % data)
             return ldtp.generatekeyevent(data)
         except LdtpExecutionError as e:
-            print e.message
+            print (e.message)
             raise LdtpExecutionError
 
     def get_window_list(self):
