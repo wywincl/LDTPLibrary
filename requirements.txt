@@ -2,4 +2,5 @@
 robotframework==2.9.0
 docutils==0.8.1
 decorator==3.3.2
+six==1.10.0
 # ldtp==3.5.0, pypi.python.org does not existed. we should get if from others url.
