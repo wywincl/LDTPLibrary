@@ -17,7 +17,6 @@ See 'LICENSE' in the source distribution for more information.
 
 import ldtp
 import sys
-import importlib
 from .keywordgroup import KeywordGroup
 from ldtp.client_exception import LdtpExecutionError
 from ._exception import LdtpError
@@ -34,8 +33,10 @@ class LDTPKeywords(KeywordGroup):
 
     def __init__(self):
         self._client = ldtp
-#        importlib.reload(sys)
-#        sys.setdefaultencoding('utf-8')
+
+        if sys.version_info[:2] < (3, 0):
+            reload(sys)
+            sys.setdefaultencoding('utf-8')
 
     def launch_app(self, cmd, lang='zh_CN.UTF-8', delay=0, env=1, *args):
         """
