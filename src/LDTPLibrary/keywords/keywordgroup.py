@@ -17,6 +17,7 @@ See 'LICENSE' in the source distribution for more information.
 
 import sys
 import inspect
+from six import with_metaclass
 
 try:
     from decorator import decorator
@@ -58,5 +59,5 @@ class KeywordGroupMetaClass(type):
         return type.__new__(mcs, cls_name, bases, dict_i)
 
 
-class KeywordGroup(object):
-    __metaclass__ = KeywordGroupMetaClass
+class KeywordGroup(with_metaclass(KeywordGroupMetaClass, object)):
+    pass
