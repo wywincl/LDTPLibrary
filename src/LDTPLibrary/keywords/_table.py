@@ -15,10 +15,21 @@ See http://ldtp.freedesktop.org/wiki/ for more information on LDTP.
 See 'LICENSE' in the source distribution for more information.
 """
 
-import ldtp
+import sys
+try:
+    import ldtp
+except ImportError:
+    if sys.platform != "darwin":
+        raise ImportError
+    import atomac.ldtp as ldtp
 from .keywordgroup import KeywordGroup
 from ._exception import LdtpError
-from ldtp.client_exception import LdtpExecutionError
+try:
+    from ldtp.client_exception import LdtpExecutionError
+except ImportError:
+    if sys.platform != "darwin":
+        raise ImportError
+    from atomac.ldtp.client_exception import LdtpExecutionError
 
 
 class TableKeywords(KeywordGroup):
