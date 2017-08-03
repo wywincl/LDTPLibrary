@@ -15,11 +15,21 @@ See http://ldtp.freedesktop.org/wiki/ for more information on LDTP.
 See 'LICENSE' in the source distribution for more information.
 """
 
-import ldtp
 import sys
-from .keywordgroup import KeywordGroup
-from ldtp.client_exception import LdtpExecutionError
-from ._exception import LdtpError
+try:
+    import ldtp
+except ImportError:
+    if sys.platform != "darwin":
+        raise
+    import atomac.ldtp as ldtp
+from keywordgroup import KeywordGroup
+try:
+    from ldtp.client_exception import LdtpExecutionError
+except ImportError:
+    if sys.platform != "darwin":
+        raise
+    from atomac.ldtp.client_exception import LdtpExecutionError
+from _exception import LdtpError
 from robot.api.deco import keyword
 
 try:
