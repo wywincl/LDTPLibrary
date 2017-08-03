@@ -20,14 +20,14 @@ try:
     import ldtp
 except ImportError:
     if sys.platform != "darwin":
-        raise ImportError
+        raise
     import atomac.ldtp as ldtp
 from keywordgroup import KeywordGroup
 try:
     from ldtp.client_exception import LdtpExecutionError
 except ImportError:
     if sys.platform != "darwin":
-        raise ImportError
+        raise
     from atomac.ldtp.client_exception import LdtpExecutionError
 from _exception import LdtpError
 from robot.api.deco import keyword
